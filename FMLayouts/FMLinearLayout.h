@@ -1,9 +1,9 @@
 //
 //  FMLinearLayout.h
-//  Fanmei
+//  PinkuMall
 //
 //  Created by 李传格 on 16/10/9.
-//  Copyright © 2016年 Fanmei. All rights reserved.
+//  Copyright © 2016年 PinkuMall. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,9 +21,9 @@ typedef NS_ENUM(NSInteger, FMLayoutAxis) {
  */
 typedef NS_ENUM(NSInteger, FMLayoutDistribution) {
     /*
-     Adjust layout size along main axis, to fit arranged subviews and spacings.
+     Adjust self size to fit subviews and spacings.
      */
-    FMLayoutDistributionAlongAxis = 0,
+    FMLayoutDistributionWrapContent = 0,
     
     /*
      Adjust arranged subviews size to fill layout size along main axis. 
@@ -34,7 +34,32 @@ typedef NS_ENUM(NSInteger, FMLayoutDistribution) {
     /*
      Adjust `fmLayout_leadingSpacing` and `fmLayout_trailingSpacing`, arranged subviews alignment center along main axis.
      */
-    FMLayoutDistributionCenter
+    FMLayoutDistributionCenter,
+    
+    /*
+     Layout items along main axis from leading.
+     */
+    FMLayoutDistributionLeading,
+    
+    /*
+     Adjust `fmLayout_spacing`, arranged subviews alignment between along main axis.
+     
+     ------------------------------------------------
+     |   item1   |        |item2|        |   item3  |
+     ------------------------------------------------
+     
+     */
+    FMLayoutDistributionSpaceBetween,
+    
+    /*
+     Adjust `fmLayout_leadingSpacing` and `fmLayout_trailingSpacing` and `fmLayout_spacing`, arranged subviews alignment between along main axis.
+     
+     --------------------------------------------------
+     |  |    item1   |    |item2|     |    item3   |  |
+     --------------------------------------------------
+     
+     */
+    FMLayoutDistributionSpaceAround
 };
 
 /*
@@ -55,6 +80,11 @@ typedef NS_ENUM(NSInteger, FMLayoutAlignment) {
      Arranged subviews alignment trailing along cross axis.
      */
     FMLayoutAlignmentTrailing,
+    
+    /*
+     Arranged subviews alignment fill in cross axis.
+     */
+    FMLayoutAlignmentFill,
 };
 
 /*
@@ -73,17 +103,25 @@ typedef NS_ENUM(NSInteger, FMLayoutAlignment) {
 #pragma mark - configs
 
 @property (nonatomic, assign) FMLayoutAxis fmLayout_axis; // default is kFMLayoutAxisVertical
-@property (nonatomic, assign) FMLayoutDistribution fmLayout_distribution; // default is FMLayoutDistributionAlongAxis
+@property (nonatomic, assign) FMLayoutDistribution fmLayout_distribution; // default is FMLayoutDistributionWrapContent
 @property (nonatomic, assign) FMLayoutAlignment fmLayout_alignment; // default is FMLayoutAlignmentCenter
 @property (nonatomic, assign) CGFloat fmLayout_spacing; // default is 0
+
+@property (nonatomic, assign) CGFloat fmLayout_spacingAroundWeight; // default is 0.5, 不为负数，fmLayout_distribution==FMLayoutDistributionSpaceAround 有效
+
+#pragma mark - insets
+
 @property (nonatomic, assign) CGFloat fmLayout_leadingSpacing; // default is 0
 @property (nonatomic, assign) CGFloat fmLayout_trailingSpacing; // default is 0
+@property (nonatomic, assign) CGFloat fmLayout_crossAxisLeadingSpacing;
+@property (nonatomic, assign) CGFloat fmLayout_crossAxisTrailingSpacing;
 
 #pragma mark - apis
 
 /* Add a view to the end of the arrangedSubviews list, and call -addSubview: automatically.
  */
 - (void)addArrangedSubview:(UIView *)view;
+- (void)addArrangedSubview:(UIView *)view subviewSpacing:(CGFloat)spacing;
 - (void)addArrangedSubviews:(NSArray *)subviews;
 
 /* Removes a subview from the list of arranged subviews and send it -removeFromSuperview automatically.
@@ -91,7 +129,11 @@ typedef NS_ENUM(NSInteger, FMLayoutAlignment) {
 - (void)removeArrangedSubview:(UIView *)view;
 - (void)removeAllArrangedSubviews;
 
+- (void)replaceArrangedSubview:(UIView *)oldview withView:(UIView *)newView;
+
 - (NSArray<__kindof UIView *> *)fetchArrangedSubviews;
+
+- (void)reLayout;
 
 @end
 

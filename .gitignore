@@ -18,8 +18,8 @@ DerivedData
 *.xcworkspace/
 
 ## Pods
-Pods/
-Podfile.lock
+##Pods/
+##Podfile.lock
 ## Other
 *.xccheckout
 *.moved-aside

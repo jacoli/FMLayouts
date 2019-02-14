@@ -1,0 +1,6 @@
+framework module Pods_FMLayoutsTests {
+  umbrella header "Pods-FMLayoutsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

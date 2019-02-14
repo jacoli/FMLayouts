@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16E9272C3C91954F3B13C0DD89CE6848 /* FMLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 908609FEDEB28D95DDB555CC787BB9E4 /* FMLinearLayout.m */; };
+		21BBD7D7579264A81632FEF925E43FFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		3FA6D0A9A7C4DB976F12311E2E3B0B2D /* FMScrollableLinearLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E8DD16CA47EE5125FA37998CD3B6F960 /* FMScrollableLinearLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43467B46599A78A3CD67C32045E25796 /* Pods-FMLayoutsTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CC061FDB874A00B66832135D5B6DB0EB /* Pods-FMLayoutsTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47F345A78E454E463AF5BC6778865F57 /* UIView+FMLayoutsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1557D604DEAF189111D51945826E1CE2 /* UIView+FMLayoutsUtils.m */; };
+		54F8DA5189815DA67E816EE060006BF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		59E3451722EE694F0D78C4C82EEA1DB8 /* FMGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D340ECB248C97B91B4D8A51F1217D88 /* FMGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68D0A6691ED4FFFD9FB4B4654F7BBB6B /* FMScrollableFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB7FD4F864E6C3DFA964B10F003CA97 /* FMScrollableFlowLayout.m */; };
+		71FF37D741270293F2139B34B26E748A /* FMScrollableLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 428BFDC21F609EECE0E0FDE3F1CC36B8 /* FMScrollableLinearLayout.m */; };
+		75B053CBD88895B94593BC0413D8F1E9 /* FMLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = B44CF09C01872F55B2F5E8F973D35A17 /* FMLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B5A38AC3BE1449DEC3D962642B34A77 /* FMScrollableFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = C90A9BD02F8C8D426AF0B47614C695B0 /* FMScrollableFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B4DD5890B684B8B11E8C7BFFCE521E2 /* Pods-FMLayoutsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E677F000706587FAEAFA8032724C86 /* Pods-FMLayoutsTests-dummy.m */; };
+		AC71634FBD70C6F8B15624565C17FF40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		B2F4CFCAA02933E898D3FB7B938F9310 /* UIView+FMLayoutsUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2052A9A9ED826CE2B8AAD1DC5D72C6A9 /* UIView+FMLayoutsUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA119372A1C64AEAD16BD895E6061B50 /* Pods-FMLayouts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B30EB77DC2DFFD30C197D269C7340A2 /* Pods-FMLayouts-dummy.m */; };
+		BA2F6EBAF91E950AD72A400C91CBF983 /* FMLinearLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C578D5B19E2E677F32942379CC0FB96 /* FMLinearLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAE3B9DB96D498C99D8C4026E330AE96 /* Pods-FMLayouts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C23154B8D17C4EA2053AD5E8BCF4FCA4 /* Pods-FMLayouts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D17FC86257DF2FA8AAF78AE0964911A5 /* FMLayouts-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1C8CD7528177D690F0FDA6C65C375C /* FMLayouts-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD10FB3899C609B6389ADD2FED449C15 /* FMLayouts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AFCEBFB985F152876ED27EA8BE11D8 /* FMLayouts-dummy.m */; };
+		E2DC629BAA0C04728771FF4D5DE9768B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		FBDA74343DE2D6BA41345FFAEEE78240 /* FMGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 317B10C20FD65B52EA47E574F71629BF /* FMGridLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		332328E8E992DBD6200FF0747BA9AF7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0087F0E8465CF359257D16AE6F357256;
+			remoteInfo = FMLayouts;
+		};
+		BFB6DC47EF5A132FB2B9034FC2AE727C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0087F0E8465CF359257D16AE6F357256;
+			remoteInfo = FMLayouts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0041609667FB13F3E9F81157778FF05D /* FMLayouts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMLayouts.xcconfig; sourceTree = "<group>"; };
+		072BC55CBA57CF069DCE366B184F539E /* Pods-FMLayouts-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FMLayouts-acknowledgements.plist"; sourceTree = "<group>"; };
+		0848F0DE5E44AA7F661E2927DFD644B7 /* Pods-FMLayouts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FMLayouts.modulemap"; sourceTree = "<group>"; };
+		0BB7FD4F864E6C3DFA964B10F003CA97 /* FMScrollableFlowLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMScrollableFlowLayout.m; path = FMLayouts/FMScrollableFlowLayout.m; sourceTree = "<group>"; };
+		1557D604DEAF189111D51945826E1CE2 /* UIView+FMLayoutsUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+FMLayoutsUtils.m"; path = "FMLayouts/UIView+FMLayoutsUtils.m"; sourceTree = "<group>"; };
+		1C578D5B19E2E677F32942379CC0FB96 /* FMLinearLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMLinearLayout.h; path = FMLayouts/FMLinearLayout.h; sourceTree = "<group>"; };
+		2052A9A9ED826CE2B8AAD1DC5D72C6A9 /* UIView+FMLayoutsUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+FMLayoutsUtils.h"; path = "FMLayouts/UIView+FMLayoutsUtils.h"; sourceTree = "<group>"; };
+		27CCF12E8A91EF97B2FC53CC6EEC8E66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317B10C20FD65B52EA47E574F71629BF /* FMGridLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMGridLayout.m; path = FMLayouts/FMGridLayout.m; sourceTree = "<group>"; };
+		34372ED777B5CA21DA2E71F906F317F0 /* Pods_FMLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FMLayouts.framework; path = "Pods-FMLayouts.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		399E5F69575345083DC6FF56F842173E /* Pods-FMLayouts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMLayouts.debug.xcconfig"; sourceTree = "<group>"; };
+		3B6A7A739D3A201F4150D3BA0859E68C /* Pods-FMLayouts-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FMLayouts-resources.sh"; sourceTree = "<group>"; };
+		3D340ECB248C97B91B4D8A51F1217D88 /* FMGridLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMGridLayout.h; path = FMLayouts/FMGridLayout.h; sourceTree = "<group>"; };
+		401E573000241980F9AD8646DEA56D58 /* FMLayouts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMLayouts-prefix.pch"; sourceTree = "<group>"; };
+		428BFDC21F609EECE0E0FDE3F1CC36B8 /* FMScrollableLinearLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMScrollableLinearLayout.m; path = FMLayouts/FMScrollableLinearLayout.m; sourceTree = "<group>"; };
+		4C1C8CD7528177D690F0FDA6C65C375C /* FMLayouts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMLayouts-umbrella.h"; sourceTree = "<group>"; };
+		4ED6A7BCB3FFA486471B1CA270E9FEF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B30EB77DC2DFFD30C197D269C7340A2 /* Pods-FMLayouts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMLayouts-dummy.m"; sourceTree = "<group>"; };
+		61EF04288CBD4EC308A969AA5795F638 /* Pods-FMLayouts-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FMLayouts-acknowledgements.markdown"; sourceTree = "<group>"; };
+		66A4ADF4618249757E79E8D15539C001 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6F059E654C7F99BEA733B66C950557FF /* FMLayouts.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = FMLayouts.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		77027D61163121E0B53C83CB4F849F1C /* Pods_FMLayoutsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FMLayoutsTests.framework; path = "Pods-FMLayoutsTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E677F000706587FAEAFA8032724C86 /* Pods-FMLayoutsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FMLayoutsTests-dummy.m"; sourceTree = "<group>"; };
+		7E98993679701BA947661EE1023DF7F3 /* Pods-FMLayouts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMLayouts.release.xcconfig"; sourceTree = "<group>"; };
+		8839DD134BA436A87246923F7F4A81F9 /* Pods-FMLayoutsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FMLayoutsTests-frameworks.sh"; sourceTree = "<group>"; };
+		8A7D35D5CD44201785D7613D47C4FD9C /* Pods-FMLayoutsTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FMLayoutsTests.modulemap"; sourceTree = "<group>"; };
+		8C152A2D3657732C898C53ED242CA484 /* Pods-FMLayoutsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMLayoutsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C5B283051CE53FF775EBC55B51874B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		908609FEDEB28D95DDB555CC787BB9E4 /* FMLinearLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMLinearLayout.m; path = FMLayouts/FMLinearLayout.m; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1BB5DCE7DA187A98B76726778386908 /* Pods-FMLayoutsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FMLayoutsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A83391EF0C032B5E78BAF8B9E74BE475 /* FMLayouts.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FMLayouts.modulemap; sourceTree = "<group>"; };
+		AAC9011DB411B35BF2040D57FE45CE47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD20A08E2943001E82F19E5BBDBF2D6 /* Pods-FMLayoutsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FMLayoutsTests-resources.sh"; sourceTree = "<group>"; };
+		B20FD266241D5601B03B212E48FC80F9 /* FMLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FMLayouts.framework; path = FMLayouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B44CF09C01872F55B2F5E8F973D35A17 /* FMLayouts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMLayouts.h; path = FMLayouts/FMLayouts.h; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C23154B8D17C4EA2053AD5E8BCF4FCA4 /* Pods-FMLayouts-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMLayouts-umbrella.h"; sourceTree = "<group>"; };
+		C90A9BD02F8C8D426AF0B47614C695B0 /* FMScrollableFlowLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMScrollableFlowLayout.h; path = FMLayouts/FMScrollableFlowLayout.h; sourceTree = "<group>"; };
+		CC061FDB874A00B66832135D5B6DB0EB /* Pods-FMLayoutsTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FMLayoutsTests-umbrella.h"; sourceTree = "<group>"; };
+		D1780B07704460FAF1B7957FD1923F13 /* Pods-FMLayouts-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FMLayouts-frameworks.sh"; sourceTree = "<group>"; };
+		E8DD16CA47EE5125FA37998CD3B6F960 /* FMScrollableLinearLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMScrollableLinearLayout.h; path = FMLayouts/FMScrollableLinearLayout.h; sourceTree = "<group>"; };
+		EFD71E93EA19428CCD2159E1B19C2D29 /* Pods-FMLayoutsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FMLayoutsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1AFCEBFB985F152876ED27EA8BE11D8 /* FMLayouts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMLayouts-dummy.m"; sourceTree = "<group>"; };
+		F6DB440FEF8AB25469BE351B8EE6E812 /* Pods-FMLayoutsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FMLayoutsTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EF9263689CCC8D352442A45722EFB1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54F8DA5189815DA67E816EE060006BF5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		533CAB8E569747E74E408275B5A4F6DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BBD7D7579264A81632FEF925E43FFE /* Foundation.framework in Frameworks */,
+				E2DC629BAA0C04728771FF4D5DE9768B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F09735483D85A90E0677828FD19EF205 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC71634FBD70C6F8B15624565C17FF40 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BD59E3C05025FDBB9C3494F523A4C3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B20FD266241D5601B03B212E48FC80F9 /* FMLayouts.framework */,
+				34372ED777B5CA21DA2E71F906F317F0 /* Pods_FMLayouts.framework */,
+				77027D61163121E0B53C83CB4F849F1C /* Pods_FMLayoutsTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52EC6A1AC467291EAAAD046ABDB62423 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A83391EF0C032B5E78BAF8B9E74BE475 /* FMLayouts.modulemap */,
+				0041609667FB13F3E9F81157778FF05D /* FMLayouts.xcconfig */,
+				F1AFCEBFB985F152876ED27EA8BE11D8 /* FMLayouts-dummy.m */,
+				401E573000241980F9AD8646DEA56D58 /* FMLayouts-prefix.pch */,
+				4C1C8CD7528177D690F0FDA6C65C375C /* FMLayouts-umbrella.h */,
+				27CCF12E8A91EF97B2FC53CC6EEC8E66 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Examples/FMLayouts/Pods/Target Support Files/FMLayouts";
+			sourceTree = "<group>";
+		};
+		62D36305498E4BD912C69C697662F0D5 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				914D220E50CB5EA50E9E0A488B7C7287 /* FMLayouts */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				62D36305498E4BD912C69C697662F0D5 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				4BD59E3C05025FDBB9C3494F523A4C3B /* Products */,
+				F3C2785C79CB99ADF22C2E87B57D19F6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89F18ABD36599790C5BE1910C668FB67 /* Pods-FMLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				4ED6A7BCB3FFA486471B1CA270E9FEF1 /* Info.plist */,
+				0848F0DE5E44AA7F661E2927DFD644B7 /* Pods-FMLayouts.modulemap */,
+				61EF04288CBD4EC308A969AA5795F638 /* Pods-FMLayouts-acknowledgements.markdown */,
+				072BC55CBA57CF069DCE366B184F539E /* Pods-FMLayouts-acknowledgements.plist */,
+				5B30EB77DC2DFFD30C197D269C7340A2 /* Pods-FMLayouts-dummy.m */,
+				D1780B07704460FAF1B7957FD1923F13 /* Pods-FMLayouts-frameworks.sh */,
+				3B6A7A739D3A201F4150D3BA0859E68C /* Pods-FMLayouts-resources.sh */,
+				C23154B8D17C4EA2053AD5E8BCF4FCA4 /* Pods-FMLayouts-umbrella.h */,
+				399E5F69575345083DC6FF56F842173E /* Pods-FMLayouts.debug.xcconfig */,
+				7E98993679701BA947661EE1023DF7F3 /* Pods-FMLayouts.release.xcconfig */,
+			);
+			name = "Pods-FMLayouts";
+			path = "Target Support Files/Pods-FMLayouts";
+			sourceTree = "<group>";
+		};
+		914D220E50CB5EA50E9E0A488B7C7287 /* FMLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				3D340ECB248C97B91B4D8A51F1217D88 /* FMGridLayout.h */,
+				317B10C20FD65B52EA47E574F71629BF /* FMGridLayout.m */,
+				B44CF09C01872F55B2F5E8F973D35A17 /* FMLayouts.h */,
+				1C578D5B19E2E677F32942379CC0FB96 /* FMLinearLayout.h */,
+				908609FEDEB28D95DDB555CC787BB9E4 /* FMLinearLayout.m */,
+				C90A9BD02F8C8D426AF0B47614C695B0 /* FMScrollableFlowLayout.h */,
+				0BB7FD4F864E6C3DFA964B10F003CA97 /* FMScrollableFlowLayout.m */,
+				E8DD16CA47EE5125FA37998CD3B6F960 /* FMScrollableLinearLayout.h */,
+				428BFDC21F609EECE0E0FDE3F1CC36B8 /* FMScrollableLinearLayout.m */,
+				2052A9A9ED826CE2B8AAD1DC5D72C6A9 /* UIView+FMLayoutsUtils.h */,
+				1557D604DEAF189111D51945826E1CE2 /* UIView+FMLayoutsUtils.m */,
+				B93423E9D1069F430810AA034CE5B918 /* Pod */,
+				52EC6A1AC467291EAAAD046ABDB62423 /* Support Files */,
+			);
+			name = FMLayouts;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		B93423E9D1069F430810AA034CE5B918 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6F059E654C7F99BEA733B66C950557FF /* FMLayouts.podspec */,
+				8C5B283051CE53FF775EBC55B51874B6 /* LICENSE */,
+				66A4ADF4618249757E79E8D15539C001 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		BB986743E033DB9A0CE068D68F218EAB /* Pods-FMLayoutsTests */ = {
+			isa = PBXGroup;
+			children = (
+				AAC9011DB411B35BF2040D57FE45CE47 /* Info.plist */,
+				8A7D35D5CD44201785D7613D47C4FD9C /* Pods-FMLayoutsTests.modulemap */,
+				EFD71E93EA19428CCD2159E1B19C2D29 /* Pods-FMLayoutsTests-acknowledgements.markdown */,
+				A1BB5DCE7DA187A98B76726778386908 /* Pods-FMLayoutsTests-acknowledgements.plist */,
+				77E677F000706587FAEAFA8032724C86 /* Pods-FMLayoutsTests-dummy.m */,
+				8839DD134BA436A87246923F7F4A81F9 /* Pods-FMLayoutsTests-frameworks.sh */,
+				AAD20A08E2943001E82F19E5BBDBF2D6 /* Pods-FMLayoutsTests-resources.sh */,
+				CC061FDB874A00B66832135D5B6DB0EB /* Pods-FMLayoutsTests-umbrella.h */,
+				8C152A2D3657732C898C53ED242CA484 /* Pods-FMLayoutsTests.debug.xcconfig */,
+				F6DB440FEF8AB25469BE351B8EE6E812 /* Pods-FMLayoutsTests.release.xcconfig */,
+			);
+			name = "Pods-FMLayoutsTests";
+			path = "Target Support Files/Pods-FMLayoutsTests";
+			sourceTree = "<group>";
+		};
+		F3C2785C79CB99ADF22C2E87B57D19F6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89F18ABD36599790C5BE1910C668FB67 /* Pods-FMLayouts */,
+				BB986743E033DB9A0CE068D68F218EAB /* Pods-FMLayoutsTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		296FE88387F279EC05C900F60969C913 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE3B9DB96D498C99D8C4026E330AE96 /* Pods-FMLayouts-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F6D9B2ED4170011E034230FE6579723 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E3451722EE694F0D78C4C82EEA1DB8 /* FMGridLayout.h in Headers */,
+				D17FC86257DF2FA8AAF78AE0964911A5 /* FMLayouts-umbrella.h in Headers */,
+				75B053CBD88895B94593BC0413D8F1E9 /* FMLayouts.h in Headers */,
+				BA2F6EBAF91E950AD72A400C91CBF983 /* FMLinearLayout.h in Headers */,
+				8B5A38AC3BE1449DEC3D962642B34A77 /* FMScrollableFlowLayout.h in Headers */,
+				3FA6D0A9A7C4DB976F12311E2E3B0B2D /* FMScrollableLinearLayout.h in Headers */,
+				B2F4CFCAA02933E898D3FB7B938F9310 /* UIView+FMLayoutsUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55E5D4FB53CE2FFF7E6F16DC3BC23440 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43467B46599A78A3CD67C32045E25796 /* Pods-FMLayoutsTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0087F0E8465CF359257D16AE6F357256 /* FMLayouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3E275604FB5A52161E0EC9D34A51B2 /* Build configuration list for PBXNativeTarget "FMLayouts" */;
+			buildPhases = (
+				709E13C653928450EECDF2677A6499ED /* Sources */,
+				533CAB8E569747E74E408275B5A4F6DD /* Frameworks */,
+				4F6D9B2ED4170011E034230FE6579723 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMLayouts;
+			productName = FMLayouts;
+			productReference = B20FD266241D5601B03B212E48FC80F9 /* FMLayouts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		19032DA8B6E1625FF126FCF86E95C26E /* Pods-FMLayoutsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA351A61518520A4275A6418D830F008 /* Build configuration list for PBXNativeTarget "Pods-FMLayoutsTests" */;
+			buildPhases = (
+				AA9C3E4F854EF813DCEC5B2753610C6F /* Sources */,
+				3EF9263689CCC8D352442A45722EFB1A /* Frameworks */,
+				55E5D4FB53CE2FFF7E6F16DC3BC23440 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A453387DC678FB518FDD317DF441881 /* PBXTargetDependency */,
+			);
+			name = "Pods-FMLayoutsTests";
+			productName = "Pods-FMLayoutsTests";
+			productReference = 77027D61163121E0B53C83CB4F849F1C /* Pods_FMLayoutsTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA0E41EB0E702E18375FD877717423E0 /* Pods-FMLayouts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDB12A7061707BB3EE9394D5A83FF274 /* Build configuration list for PBXNativeTarget "Pods-FMLayouts" */;
+			buildPhases = (
+				47159BECF6C3824AF5FD5C1E31479F75 /* Sources */,
+				F09735483D85A90E0677828FD19EF205 /* Frameworks */,
+				296FE88387F279EC05C900F60969C913 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				297C70A4696D48085BDF2839CDF74399 /* PBXTargetDependency */,
+			);
+			name = "Pods-FMLayouts";
+			productName = "Pods-FMLayouts";
+			productReference = 34372ED777B5CA21DA2E71F906F317F0 /* Pods_FMLayouts.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4BD59E3C05025FDBB9C3494F523A4C3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0087F0E8465CF359257D16AE6F357256 /* FMLayouts */,
+				DA0E41EB0E702E18375FD877717423E0 /* Pods-FMLayouts */,
+				19032DA8B6E1625FF126FCF86E95C26E /* Pods-FMLayoutsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47159BECF6C3824AF5FD5C1E31479F75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA119372A1C64AEAD16BD895E6061B50 /* Pods-FMLayouts-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		709E13C653928450EECDF2677A6499ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBDA74343DE2D6BA41345FFAEEE78240 /* FMGridLayout.m in Sources */,
+				DD10FB3899C609B6389ADD2FED449C15 /* FMLayouts-dummy.m in Sources */,
+				16E9272C3C91954F3B13C0DD89CE6848 /* FMLinearLayout.m in Sources */,
+				68D0A6691ED4FFFD9FB4B4654F7BBB6B /* FMScrollableFlowLayout.m in Sources */,
+				71FF37D741270293F2139B34B26E748A /* FMScrollableLinearLayout.m in Sources */,
+				47F345A78E454E463AF5BC6778865F57 /* UIView+FMLayoutsUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA9C3E4F854EF813DCEC5B2753610C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B4DD5890B684B8B11E8C7BFFCE521E2 /* Pods-FMLayoutsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A453387DC678FB518FDD317DF441881 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMLayouts;
+			target = 0087F0E8465CF359257D16AE6F357256 /* FMLayouts */;
+			targetProxy = 332328E8E992DBD6200FF0747BA9AF7B /* PBXContainerItemProxy */;
+		};
+		297C70A4696D48085BDF2839CDF74399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMLayouts;
+			target = 0087F0E8465CF359257D16AE6F357256 /* FMLayouts */;
+			targetProxy = BFB6DC47EF5A132FB2B9034FC2AE727C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		185FDADFA2764EFD49507052267B13CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0041609667FB13F3E9F81157778FF05D /* FMLayouts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FMLayouts/FMLayouts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMLayouts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMLayouts/FMLayouts.modulemap";
+				PRODUCT_MODULE_NAME = FMLayouts;
+				PRODUCT_NAME = FMLayouts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4CEF5F89D8457F37F0795635C3139A54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6DB440FEF8AB25469BE351B8EE6E812 /* Pods-FMLayoutsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FMLayoutsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FMLayoutsTests/Pods-FMLayoutsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5AE89CA24A0A62F2E535A169D4B57D48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C152A2D3657732C898C53ED242CA484 /* Pods-FMLayoutsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FMLayoutsTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FMLayoutsTests/Pods-FMLayoutsTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90C2C779A8D8C2A3F07B98B20E349580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E98993679701BA947661EE1023DF7F3 /* Pods-FMLayouts.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FMLayouts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FMLayouts/Pods-FMLayouts.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		952AB92EBD70BC8A335845505732A89D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 399E5F69575345083DC6FF56F842173E /* Pods-FMLayouts.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FMLayouts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FMLayouts/Pods-FMLayouts.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9AC12289CD8978D51F9223B457E7DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D6B9397925310B0D5C588DDF8E559BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0041609667FB13F3E9F81157778FF05D /* FMLayouts.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FMLayouts/FMLayouts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMLayouts/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMLayouts/FMLayouts.modulemap";
+				PRODUCT_MODULE_NAME = FMLayouts;
+				PRODUCT_NAME = FMLayouts;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DEC9569BB66BEC125260336D8D9273BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B3E275604FB5A52161E0EC9D34A51B2 /* Build configuration list for PBXNativeTarget "FMLayouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6B9397925310B0D5C588DDF8E559BF7 /* Debug */,
+				185FDADFA2764EFD49507052267B13CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEC9569BB66BEC125260336D8D9273BA /* Debug */,
+				B9AC12289CD8978D51F9223B457E7DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA351A61518520A4275A6418D830F008 /* Build configuration list for PBXNativeTarget "Pods-FMLayoutsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AE89CA24A0A62F2E535A169D4B57D48 /* Debug */,
+				4CEF5F89D8457F37F0795635C3139A54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDB12A7061707BB3EE9394D5A83FF274 /* Build configuration list for PBXNativeTarget "Pods-FMLayouts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952AB92EBD70BC8A335845505732A89D /* Debug */,
+				90C2C779A8D8C2A3F07B98B20E349580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

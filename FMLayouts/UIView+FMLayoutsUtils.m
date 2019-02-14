@@ -1,9 +1,9 @@
 //
 //  UIView+FMLayoutsUtils.m
-//  Fanmei
+//  PinkuMall
 //
 //  Created by 李传格 on 17/2/16.
-//  Copyright © 2017年 Fanmei. All rights reserved.
+//  Copyright © 2017年 PinkuMall. All rights reserved.
 //
 
 #import "UIView+FMLayoutsUtils.h"
@@ -72,7 +72,9 @@
 
 - (void)setFm_top:(CGFloat)t
 {
-    self.frame = CGRectMake(self.fm_left, t, self.fm_width, self.fm_height);
+    CGRect frame = self.frame;
+    frame.origin.y = t;
+    self.frame = frame;
 }
 
 - (CGFloat)fm_top
@@ -82,17 +84,21 @@
 
 - (void)setFm_bottom:(CGFloat)b
 {
-    self.frame = CGRectMake(self.fm_left, b - self.fm_height, self.fm_width, self.fm_height);
+    CGRect frame = self.frame;
+    frame.origin.y = b - CGRectGetHeight(frame);
+    self.frame = frame;
 }
 
 - (CGFloat)fm_bottom
 {
-    return self.frame.origin.y + self.frame.size.height;
+    return CGRectGetMaxY(self.frame);
 }
 
 - (void)setFm_left:(CGFloat)l
 {
-    self.frame = CGRectMake(l, self.fm_top, self.fm_width, self.fm_height);
+    CGRect frame = self.frame;
+    frame.origin.x = l;
+    self.frame = frame;
 }
 
 - (CGFloat)fm_left
@@ -102,12 +108,14 @@
 
 - (void)setFm_right:(CGFloat)r
 {
-    self.frame = CGRectMake(r - self.fm_width, self.fm_top, self.fm_width, self.fm_height);
+    CGRect frame = self.frame;
+    frame.origin.x = r - CGRectGetWidth(self.frame);
+    self.frame = frame;
 }
 
 - (CGFloat)fm_right
 {
-    return self.frame.origin.x + self.frame.size.width;
+    return CGRectGetMaxX(self.frame);
 }
 
 @end

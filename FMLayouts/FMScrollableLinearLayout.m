@@ -1,9 +1,9 @@
 //
 //  FMScrollableLinearLayout.m
-//  Fanmei
+//  PinkuMall
 //
 //  Created by 李传格 on 16/10/9.
-//  Copyright © 2016年 Fanmei. All rights reserved.
+//  Copyright © 2016年 PinkuMall. All rights reserved.
 //
 
 #import "FMScrollableLinearLayout.h"
@@ -16,12 +16,30 @@
 
 @implementation FMScrollableLinearLayout
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.layout.frame = self.bounds;
+    }
+    return self;
+}
+
 - (FMLinearLayout *)layout {
     if (!_layout) {
-        _layout = [[FMLinearLayout alloc] initWithFrame:self.bounds];
+        _layout = [[FMLinearLayout alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds))];
         [self addSubview:_layout];
     }
     return _layout;
+}
+
+- (void)setFrame:(CGRect)frame {
+    BOOL isFrameChanged = !CGRectEqualToRect(self.frame, frame);
+    [super setFrame:frame];
+    
+    if (isFrameChanged) {
+        self.layout.frame = CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
+        [self.layout reLayout];
+        self.contentSize = self.layout.frame.size;
+    }
 }
 
 - (void)setFmLayout_axis:(FMLayoutAxis)fmLayout_axis {
@@ -30,6 +48,14 @@
 
 - (FMLayoutAxis)fmLayout_axis {
     return self.layout.fmLayout_axis;
+}
+
+- (void)setFmLayout_alignment:(FMLayoutAlignment)fmLayout_alignment {
+    self.layout.fmLayout_alignment = fmLayout_alignment;
+}
+
+- (FMLayoutAlignment)fmLayout_alignment {
+    return self.layout.fmLayout_alignment;
 }
 
 - (void)setFmLayout_spacing:(CGFloat)fmLayout_spacing {
@@ -61,6 +87,11 @@
     self.contentSize = self.layout.frame.size;
 }
 
+- (void)addArrangedSubview:(UIView *)view subviewSpacing:(CGFloat)spacing {
+    [self.layout addArrangedSubview:view subviewSpacing:spacing];
+    self.contentSize = self.layout.frame.size;
+}
+
 - (void)removeArrangedSubview:(UIView *)view {
     [self.layout removeArrangedSubview:view];
     self.contentSize = self.layout.frame.size;
@@ -86,33 +117,16 @@
     [self addArrangedSubviews:subviews];
     
     // adjust content offset
-    if (self.fmLayout_axis == kFMLayoutAxisVertical) {
-        if (self.contentSize.height < oldContentSize.height) {
-            if (offset.y > self.contentSize.height + self.contentInset.bottom + self.contentInset.top - CGRectGetHeight(self.bounds)) {
-                offset.y = self.contentSize.height + self.contentInset.bottom + self.contentInset.top - CGRectGetHeight(self.bounds);
-                if (offset.y < -self.contentInset.top) {
-                    offset.y = -self.contentInset.top;
-                }
-            }
-        }
-    }
-    else {
-        if (self.contentSize.width < oldContentSize.width) {
-            if (offset.x > self.contentSize.width + self.contentInset.right + self.contentInset.left - CGRectGetWidth(self.bounds)) {
-                offset.x = self.contentSize.width + self.contentInset.right + self.contentInset.left - CGRectGetWidth(self.bounds);
-                if (offset.x < -self.contentInset.left) {
-                    offset.x = -self.contentInset.left;
-                }
-                
-            }
-        }
-    }
-    
     self.contentOffset = offset;
 }
 
 - (NSArray<__kindof UIView *> *)fetchArrangedSubviews {
     return [self.layout fetchArrangedSubviews];
+}
+
+- (void)reLayout {
+    [self.layout reLayout];
+    self.contentSize = self.layout.frame.size;
 }
 
 @end

@@ -1,0 +1,16 @@
+PODS:
+  - FMLayouts (0.0.2)
+
+DEPENDENCIES:
+  - FMLayouts (from `../../`)
+
+EXTERNAL SOURCES:
+  FMLayouts:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  FMLayouts: 9f46e96feaa541f7b259a9509674633e314207ef
+
+PODFILE CHECKSUM: 7522bd1eeccb37e1fb0f7cefcec2ef4db315bed5
+
+COCOAPODS: 1.5.3

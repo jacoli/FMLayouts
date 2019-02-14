@@ -1,0 +1,6 @@
+framework module FMLayouts {
+  umbrella header "FMLayouts-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -30,11 +30,15 @@
 - (void)buildLayoutWithAxis:(FMLayoutAxis)axis
                      withTitle:(NSString *)title {
     
-    [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionAlongAxis withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:AlongAxis", title]];
+    [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionWrapContent withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:WrapContent", title]];
     
     [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionFill withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:Fill", title]];
     
     [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionCenter withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:Center", title]];
+    
+    [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionSpaceBetween withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:SpaceBetween", title]];
+
+    [self buildLayoutWithAxis:axis distribution:FMLayoutDistributionSpaceAround withTitle:[NSString stringWithFormat:@"%@\r\nMain axis distribution:SpaceAround", title]];
 }
 
 - (void)buildLayoutWithAxis:(FMLayoutAxis)axis
@@ -46,6 +50,8 @@
     [self buildLayoutWithAxis:axis distribution:distribution alignment:FMLayoutAlignmentLeading withTitle:[NSString stringWithFormat:@"%@\r\nCross axis alignment:Leading", title]];
     
     [self buildLayoutWithAxis:axis distribution:distribution alignment:FMLayoutAlignmentTrailing withTitle:[NSString stringWithFormat:@"%@\r\nCross axis alignment:Trailing", title]];
+    
+    [self buildLayoutWithAxis:axis distribution:distribution alignment:FMLayoutAlignmentFill withTitle:[NSString stringWithFormat:@"%@\r\nCross axis alignment:Fill", title]];
 }
 
 #define margin (20)
@@ -55,7 +61,7 @@
                      alignment:(FMLayoutAlignment)alignment
                      withTitle:(NSString *)title {
     
-    FMLinearLayout *container = [[FMLinearLayout alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.scrollView.frame), 0) axis:kFMLayoutAxisVertical mainAxisDistribution:FMLayoutDistributionAlongAxis crossAxisAlignment:FMLayoutAlignmentCenter];
+    FMLinearLayout *container = [[FMLinearLayout alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.scrollView.frame), 0) axis:kFMLayoutAxisVertical mainAxisDistribution:FMLayoutDistributionWrapContent crossAxisAlignment:FMLayoutAlignmentCenter];
     container.fmLayout_spacing = 20;
     container.fmLayout_trailingSpacing = 20;
     container.backgroundColor = [UIColor lightGrayColor];
@@ -66,13 +72,13 @@
     label.backgroundColor = [UIColor brownColor];
     [container addArrangedSubview:label];
     
-    FMLinearLayout *l = [[FMLinearLayout alloc] initWithFrame:CGRectMake(margin, 0, self.scrollView.frame.size.width - margin * 2, 150)];
+    FMLinearLayout *l = [[FMLinearLayout alloc] initWithFrame:CGRectMake(margin, 0, self.scrollView.frame.size.width - margin * 2, 200)];
     l.fmLayout_axis = axis;
     l.fmLayout_distribution = distribution;
     l.fmLayout_alignment = alignment;
-    l.fmLayout_spacing = 10;
-    l.fmLayout_leadingSpacing = 20;
-    l.fmLayout_trailingSpacing = 20;
+//    l.fmLayout_spacing = 10;
+//    l.fmLayout_leadingSpacing = 20;
+//    l.fmLayout_trailingSpacing = 20;
     l.backgroundColor = [UIColor grayColor];
     
     UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];

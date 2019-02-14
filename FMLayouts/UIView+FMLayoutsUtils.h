@@ -1,9 +1,9 @@
 //
 //  UIView+FMLayoutsUtils.h
-//  Fanmei
+//  PinkuMall
 //
 //  Created by 李传格 on 17/2/16.
-//  Copyright © 2017年 Fanmei. All rights reserved.
+//  Copyright © 2017年 PinkuMall. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
